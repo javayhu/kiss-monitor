@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">性能监视器</string>
+    <string name="app_name">性能监控器</string>
     <string name="switch_monitor_text">开启监控悬浮窗</string>
     <string name="monitor_on">监控悬浮窗已开启</string>
     <string name="monitor_off">监控悬浮窗已关闭</string>
