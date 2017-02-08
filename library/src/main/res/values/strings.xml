@@ -6,7 +6,7 @@
     <string name="switch_off">Off</string>
     <string name="switch_on">On</string>
     <string name="notification_monitor_ticker">Performance Monitor</string>
-    <string name="notification_monitor_title">Performance Monitoring</string>
+    <string name="notification_monitor_title">Performance Monitor</string>
     <string name="notification_monitor_content">Click to config or close monitor</string>
     <string name="permission_current_not">Currently not grant</string>
     <string name="permission_now_to">To grant permission</string>
