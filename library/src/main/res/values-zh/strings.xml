@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">性能监视器</string>
+    <string name="switch_monitor_text">开启监控悬浮窗</string>
+    <string name="monitor_on">监控悬浮窗已开启</string>
+    <string name="monitor_off">监控悬浮窗已关闭</string>
+    <string name="switch_off">关闭</string>
+    <string name="switch_on">开启</string>
+    <string name="notification_monitor_title">性能监控中</string>
+    <string name="notification_monitor_ticker">性能监控</string>
+    <string name="notification_monitor_content">点击可以进入监控配置和关闭监控</string>
+    <string name="permission_current_not">暂时不开启</string>
+    <string name="permission_now_to">现在去开启</string>
+    <string name="permission_dialog_content">性能监控工具需要您的手机授予当前应用显示悬浮窗的权限，请先开启权限再继续使用。</string>
+</resources>

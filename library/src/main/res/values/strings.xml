@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">monitor</string>
+    <string name="switch_monitor_text">Show Monitor Floating Window</string>
+    <string name="monitor_on">Monitor turns on</string>
+    <string name="monitor_off">Monitor turns off</string>
+    <string name="switch_off">Off</string>
+    <string name="switch_on">On</string>
+    <string name="notification_monitor_ticker">Performance Monitor</string>
+    <string name="notification_monitor_title">Performance Monitoring</string>
+    <string name="notification_monitor_content">Click to config or close monitor</string>
+    <string name="permission_current_not">Currently not grant</string>
+    <string name="permission_now_to">To grant permission</string>
+    <string name="permission_dialog_content">Performance Monitor tool needs you grant Floating Window permission to this application, please grant permission before using.</string>
+</resources>
