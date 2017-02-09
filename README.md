@@ -36,7 +36,7 @@ dependencies {
 
 1.Add more monitor features
 2.Add monitor configurations
-3.Make monitor simpler to use
+3.Make monitor simpler to use  
 
 ### License
 
