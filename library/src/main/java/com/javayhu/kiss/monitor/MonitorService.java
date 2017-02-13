@@ -15,6 +15,8 @@ import android.view.Gravity;
 import android.view.WindowManager;
 import android.widget.LinearLayout;
 
+import com.javayhu.kiss.monitor.activity.ActivityTracker;
+import com.javayhu.kiss.monitor.activity.ActivityTrackerView;
 import com.javayhu.kiss.monitor.base.BaseTrackerView;
 import com.javayhu.kiss.monitor.cpu.CpuTracker;
 import com.javayhu.kiss.monitor.cpu.CpuTrackerView;
@@ -31,7 +33,7 @@ import java.util.List;
  */
 public class MonitorService extends Service {
 
-    private static final String TAG = "Wukong Monitor Service";
+    private static final String TAG = "Monitor Service";
     private static final int NOTIFICATION_ID = 214;
 
     private LinearLayout mMonitorLayout;
@@ -39,6 +41,7 @@ public class MonitorService extends Service {
 
     private CpuTrackerView mCpuTrackerView;
     private MemTrackerView mMemTrackerView;
+    private ActivityTrackerView mActivityTrackerView;
     //private NetworkTrackerView mNetworkTrackerView;
     //private BatteryTrackerView mBatteryTrackerView;
 
@@ -116,6 +119,9 @@ public class MonitorService extends Service {
         MemTracker memTracker = new MemTracker(this);
         mMemTrackerView = new MemTrackerView(this, memTracker);
 
+        ActivityTracker activityTracker = new ActivityTracker(this);
+        mActivityTrackerView = new ActivityTrackerView(this, activityTracker);
+
         //NetworkTracker networkTracker = new NetworkTracker(this);
         //mNetworkTrackerView = new NetworkTrackerView(this, networkTracker);
 
@@ -123,6 +129,7 @@ public class MonitorService extends Service {
         //mBatteryTrackerView = new BatteryTrackerView(this, batteryTracker);
 
         mTrackerViews = new ArrayList<>();
+        mTrackerViews.add(mActivityTrackerView);
         mTrackerViews.add(mCpuTrackerView);
         mTrackerViews.add(mMemTrackerView);
         //mTrackerViews.add(mNetworkTrackerView);

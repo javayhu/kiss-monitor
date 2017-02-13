@@ -10,5 +10,5 @@
     <string name="notification_monitor_content">Click to config or close monitor</string>
     <string name="permission_current_not">Currently not grant</string>
     <string name="permission_now_to">To grant permission</string>
-    <string name="permission_dialog_content">Performance Monitor needs you grant Floating Window permission to this application, please grant permission before using.</string>
+    <string name="permission_dialog_content">Floating Window permission is needed for Performance Monitor to run, are you sure to grant this permission to this application?</string>
 </resources>

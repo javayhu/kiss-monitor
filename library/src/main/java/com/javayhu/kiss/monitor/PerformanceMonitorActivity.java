@@ -53,10 +53,6 @@ public class PerformanceMonitorActivity extends AppCompatActivity {
         mChecked = mSharedPreferences.getBoolean(KEY_MONITOR_STATE, false);
         initUI();
 
-        if (!FloatWindowPermission.getInstance().checkPermission(this)) {
-            FloatWindowPermission.getInstance().applyPermission(this);
-        }
-
         if (mChecked) {
             startMonitorService();
         } else {
@@ -71,10 +67,8 @@ public class PerformanceMonitorActivity extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     startMonitorService();
-                    Toast.makeText(PerformanceMonitorActivity.this, R.string.monitor_on, Toast.LENGTH_SHORT).show();
                 } else {
                     stopMonitorService();
-                    Toast.makeText(PerformanceMonitorActivity.this, R.string.monitor_off, Toast.LENGTH_SHORT).show();
                 }
                 mChecked = isChecked;
                 mSharedPreferences.edit().putBoolean(KEY_MONITOR_STATE, mChecked).apply();
@@ -84,15 +78,21 @@ public class PerformanceMonitorActivity extends AppCompatActivity {
     }
 
     private void startMonitorService() {
-        String packageName = getPackageName();
-        Intent service = (new Intent()).setClassName(packageName, packageName + ".MonitorService");
-        startService(service);
+        if (!FloatWindowPermission.getInstance().checkPermission(this)) {
+            FloatWindowPermission.getInstance().applyPermission(this);
+        } else {
+            String packageName = getPackageName();
+            Intent service = (new Intent()).setClassName(packageName, packageName + ".MonitorService");
+            startService(service);
+            Toast.makeText(PerformanceMonitorActivity.this, R.string.monitor_on, Toast.LENGTH_SHORT).show();
+        }
     }
 
     private void stopMonitorService() {
         String packageName = getPackageName();
         Intent service = (new Intent()).setClassName(packageName, packageName + ".MonitorService");
         stopService(service);
+        Toast.makeText(PerformanceMonitorActivity.this, R.string.monitor_off, Toast.LENGTH_SHORT).show();
     }
 
     private Switch addSwitchItem(String text, boolean isCheck) {

@@ -11,5 +11,5 @@
     <string name="notification_monitor_content">点击可以进入监控配置和关闭监控</string>
     <string name="permission_current_not">暂时不开启</string>
     <string name="permission_now_to">现在去开启</string>
-    <string name="permission_dialog_content">性能监控工具需要您的手机授予当前应用显示悬浮窗的权限，请先开启权限再继续使用。</string>
+    <string name="permission_dialog_content">性能监控工具需要您的手机授予当前应用显示悬浮窗的权限，是否开启权限？</string>
 </resources>
