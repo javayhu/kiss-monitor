@@ -5,10 +5,10 @@ Simple performance monitor showing CPU and memory usage of your application on t
 
 ### Screenshot
 
-1.CPU usage: user space and kernel space
-2.VM heap usage: total = used + free
-3.App memory: PSS and USS
-4.Show the top activity of the current application
+1.CPU usage: user space and kernel space  
+2.VM heap usage: total = used + free  
+3.App memory: PSS and USS  
+4.Show the top activity of the current application  
 
 ![image](images/kiss-monitor-cn.jpg)
 
@@ -35,9 +35,9 @@ dependencies {
 
 ### TODO
 
-1.Add more monitor features
-2.Add monitor configurations
-3.Make monitor simpler to use
+1.Add more monitor features  
+2.Add monitor configurations  
+3.Make monitor simpler to use  
 
 ### License
 
